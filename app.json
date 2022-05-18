@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "app_form_intelligence",
+    "slug": "app_form_intelligence",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
