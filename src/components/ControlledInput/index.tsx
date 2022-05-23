@@ -24,6 +24,10 @@ export function ControlledInput({ control, name, error, ...rest }: Props){
                     />
                 )}
             />
+
+            {
+                error && <Error>{error.message}</Error>
+            }
         </>
     )
 }
