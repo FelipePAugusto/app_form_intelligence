@@ -15,6 +15,13 @@ type FormData = {
   password_confirm: string;
 }
 
+const schema = yup.object({
+  name: yup.string().required("Informe o seu nome"),
+  email: yup.string().email("E-mail inválido.").required("Informe o e-mail."),
+  password: yup.string().min(6, "A senha deve ter ao menos 6 digitos.").required("Informe a senha."),
+  password_confirm: yup.string().oneOf([yup.ref('password'), null], "A senha de confirmação não confere.")
+});
+
 export function Form() {
   const { control, handleSubmit } = useForm<FormData>();
 
